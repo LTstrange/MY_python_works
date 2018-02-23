@@ -1,3 +1,3 @@
 # MY_works
-All my work is in here
+These programmes in this file is some little test programmes of me.
 这个文件夹里是我的各种杂项程序。
