@@ -5,6 +5,7 @@ print("Enter your height and weight, I'll tell your \"bmi\"")
 height = float(input('How tall are you (m):'))
 weight = float(input('How weight are you (kg):'))
 bmi = weight / (height*height)
+print(bmi)
 if bmi <18.5:
     print('过轻')
 elif bmi <25:
