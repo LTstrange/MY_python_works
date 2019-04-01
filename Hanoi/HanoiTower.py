@@ -13,26 +13,19 @@ def HanoiTowerMove(n, a, b, c):
 if __name__ == "__main__":
     window = tk.Tk()
     window.title("hanoi tower")
-    window.geometry('200x100')
+    window.geometry('1200x800')
 
-    var = tk.StringVar()
+    canvas = tk.Canvas(window, bg="white", height=400, width=800)
 
-    l = tk.Label(window, textvariable=var, bg='white', font=('Arial', 12), width=15, height=2)
+    x0, y0, x1, y1 = 0, 0, 80, 80
+    oval = canvas.create_oval(x0, y0, x1, y1, anchor='center', fill='green')
+    rect = canvas.create_rectangle(0, 0, 50, 50, fill='blue')
+    canvas.pack()
 
-    l.pack()
-    on_hit = False
+    def moveit():
 
-    def hit_me():
-        global on_hit
-        if not on_hit:
-            on_hit = True
-            var.set('you hit me')
-        else:
-            on_hit = False
-            var.set('')
 
-    b = tk.Button(window, text='hit me', width=15, height=2, command=hit_me)
-    b.pack()
+    b = tk.Button(window, text='move', command=moveit).pack()
 
     window.mainloop()
-    HanoiTowerMove(3, 'A', 'B', 'C')
+    # HanoiTowerMove(3, 'A', 'B', 'C')
